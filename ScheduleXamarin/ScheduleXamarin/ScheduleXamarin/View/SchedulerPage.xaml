@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:schedule="clr-namespace:Syncfusion.SfSchedule.XForms;assembly=Syncfusion.SfSchedule.XForms"
+             x:Class="ScheduleXamarin.SchedulerPage">
+    <Grid>
+        <schedule:SfSchedule x:Name="schedule" ScheduleView="MonthView" DataSource="{Binding Meetings}">
+            <schedule:SfSchedule.MonthViewSettings>
+                <schedule:MonthViewSettings ShowAgendaView="True"/>
+            </schedule:SfSchedule.MonthViewSettings>
+            <schedule:SfSchedule.AppointmentMapping>
+                <schedule:ScheduleAppointmentMapping SubjectMapping="EventName"
+                                                     StartTimeMapping="From"
+                                                     EndTimeMapping="To"
+                                                     ColorMapping="Color"/>
+            </schedule:SfSchedule.AppointmentMapping>
+        </schedule:SfSchedule>
+    </Grid>
+</ContentPage>
