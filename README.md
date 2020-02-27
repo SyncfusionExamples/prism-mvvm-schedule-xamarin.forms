@@ -16,7 +16,7 @@ The SfSchedule allows you to work with Prism framework. To achieve this, follow 
     </Application.Resources>
 </prism:PrismApplication>
 ```
-
+**C#**
 ``` c#
 public partial class App : PrismApplication
 {
